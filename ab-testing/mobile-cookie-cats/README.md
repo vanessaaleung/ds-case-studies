@@ -1,5 +1,5 @@
 # Mobile Games A/B Testing with Cookie Cats
-_Analyze impact of the placement of in-app purchase ad on player retention_
+_Analyze the impact of the placement of in-app purchase ad on player retention_
 
 ## Objectives
 <p><a href="https://www.facebook.com/cookiecatsgame">Cookie Cats</a> is a hugely popular mobile puzzle game developed by <a href="http://tactile.dk">Tactile Entertainment</a>. It's a classic "connect three"-style puzzle game where the player must connect tiles of the same color to clear the board and win the level. It also features singing cats. We're not kidding! Check out this short demo:</p>
