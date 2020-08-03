@@ -29,6 +29,7 @@ The data contains three columns: treatment (A or B), stone_size (large or small)
 
 ### Bringing stone size into the picture
 <p>When stratified by stone size, treatment A had better results for both large and small stones compared to treatment B (i.e., 73% and 93% v.s. 69% and 87%).</p>
+
 |treatment|stone_size|success|N|Freq|
 |---|---|---|---|---|
 |A|large|0|71|0.270|
@@ -42,5 +43,33 @@ The data contains three columns: treatment (A or B), stone_size (large or small)
 
 <p>From the bar plot, we noticed an unbalanced distribution of kidney stone sizes in the two treatment options. 
 Large kidney stone cases tended to be in treatment A, while small kidney stone cases tended to be in treatment B. </p>
-<img src="2.png">
+<img src="images/2.png">
 
+### Identify and confirm the lurking variable
+<p>Let's analyze the association between stone size (i.e., case severity) and treatment assignment using a statistical test called <strong>Chi-squared</strong>. 
+The <strong>Chi-squared</strong> test is appropriate to test associations between two categorical variables.</p>
+  
+With the results, we are confident that stone size/case severity is indeed the lurking variable (aka, confounding variable) in this study of kidney stone treatment and success rate.
+
+|statistic|p.value|parameter|method|
+|---|---|---|---|
+|189.3557|4.395009e-43|1|Pearson's Chi-squared test with Yates' continuity correction|
+
+### Remove the confounding effect
+In our example, we are testing to see:</p>
+<ol>
+<li>if the effect of a small stone is the same as a big stone, and </li>
+<li>if treatment A is as effective as treatment B. </li>
+</ol>
+
+<p>Let's use multiple logistic regression to remove the unwanted effect of stone size</p>
+
+|term|estimate|std.error|statistic|p.value|
+|---|---|---|---|---|
+|(Intercept)|1.0332140|0.1344695|7.683629|1.546436e-14|
+|stone_sizesmall|1.2605654|0.2390027|5.274272|1.332838e-07|
+|treatmentB|-0.3572287|0.2290792|-1.559411|1.188991e-01|
+
+<img src="images/4.png">
+
+<p>From the model output, we can conclude that the stone size is positively related to the success rate while the treatment type is not.
