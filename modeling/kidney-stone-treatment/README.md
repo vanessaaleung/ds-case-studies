@@ -1,9 +1,12 @@
-# Simpon's Paradox
+# Kidney Stone Treatment and Simpon's Paradox
+_Explore Simpon’s paradox using multiple regression and other statistical tools_
 
 ## Objective
+<p align="center">
+  <img src="https://ezzy2017.files.wordpress.com/2018/10/kidney-13.jpg" height="300px">
+</p>
 <p>In 1986, a group of urologists in London published a research paper in <em>The British Medical Journal</em> that compared the effectiveness of two different methods to remove kidney stones. Treatment A was open surgery (invasive), and treatment B was percutaneous nephrolithotomy (less invasive). When they looked at the results from 700 patients, treatment B had a higher success rate. However, when they only looked at the subgroup of patients different kidney stone sizes, treatment A had a better success rate. What is going on here? This known statistical phenomenon is called Simpon’s paradox. Simpon's paradox occurs when trends appear in subgroups but disappear or reverse when subgroups are combined. </p>
 <p>This project will explore Simpon’s paradox using multiple regression and other statistical tools.
-<img src="https://assets.datacamp.com/production/project_697/img/img1.jpg"></p>
 
 ## Data
 The data contains three columns: treatment (A or B), stone_size (large or small) and success (0 = Failure or 1 = Success). 
@@ -43,7 +46,7 @@ The data contains three columns: treatment (A or B), stone_size (large or small)
 
 <p>From the bar plot, we noticed an unbalanced distribution of kidney stone sizes in the two treatment options. 
 Large kidney stone cases tended to be in treatment A, while small kidney stone cases tended to be in treatment B. </p>
-<img src="images/2.png">
+<img src="images/2.png" height="500px">
 
 ### Identify and confirm the lurking variable
 <p>Let's analyze the association between stone size (i.e., case severity) and treatment assignment using a statistical test called <strong>Chi-squared</strong>. 
@@ -70,6 +73,8 @@ In our example, we are testing to see:</p>
 |stone_sizesmall|1.2605654|0.2390027|5.274272|1.332838e-07|
 |treatmentB|-0.3572287|0.2290792|-1.559411|1.188991e-01|
 
-<img src="images/4.png">
+Look at the 95% confidence interval:
+
+<img src="images/4.png" height="500px">
 
 <p>From the model output, we can conclude that the stone size is positively related to the success rate while the treatment type is not.
