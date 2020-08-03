@@ -1,4 +1,8 @@
 # DS Case Studies
+<p align="center">
+  <img src="https://accesto.com/images/case_study_list.svg" height="300px">
+</p>
+
 ## A/B Testing
 1. [Mobile Games A/B Testing with Cookie Cats](https://github.com/vanessaaleung/ds-case-studies/tree/master/ab-testing/mobile-cookie-cats)
 
