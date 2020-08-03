@@ -8,3 +8,6 @@
 
 ## Modeling
 1. [Kidney Stone Treatment](https://github.com/vanessaaleung/ds-case-studies/tree/master/modeling/kidney-stone-treatment)
+
+## Network Analysis
+1. [A Network Analysis of Game of Thrones](https://github.com/vanessaaleung/ds-case-studies/tree/master/network-analysis/game-of-thrones)
