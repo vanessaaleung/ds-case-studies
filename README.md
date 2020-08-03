@@ -1,4 +1,6 @@
 # DS Case Studies
+_Data Science Case Studies_
+
 <p align="center">
   <img src="https://accesto.com/images/case_study_list.svg" height="300px">
 </p>
