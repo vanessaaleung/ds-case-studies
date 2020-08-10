@@ -1,4 +1,9 @@
-# Predict Taxi Fares with Random Forests
+# Predicting Taxi Fares with Random Forests
+_Build a model that can predict the locations and times when the biggest fares can be earned_
+
+<p align="center">
+  <img src="https://cdn.hswstatic.com/gif/taxi-meters-3.jpg" height="300px">
+</p>
 
 ## Objective
 To drive a yellow New York taxi, you have to hold a "medallion" from the city's Taxi and Limousine Commission. Recently, one of those changed hands for over one million dollars, which shows how lucrative the job can be.
