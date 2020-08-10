@@ -22,12 +22,12 @@ The taxi dataset contains the times and price of a large number of taxi trips. I
 ### Where does the journey begin?
 The map from the previous task showed that the journeys are highly concentrated in the business and tourist areas. We also see that some taxi trips originating in Brooklyn slipped through.
 
-<img src="images/map.png">
+<img src="images/map.png" height="400px">
 
 ### Predicting taxi fares using a tree
 We're now going to use a regression tree to predict the total fare with lat and long being the predictors. The tree algorithm will try to find cutpoints in those predictors that results in the decision tree with the best predictive capability.
 
-<img src="images/tree.png">
+<img src="images/tree.png" height="400px">
 
 The tree above looks a bit frugal, it only includes one split: It predicts that trips where lat < 40.7237 are more expensive, which makes sense as it is downtown Manhattan.
 
@@ -36,11 +36,11 @@ A random forest model, where many different trees are fitted to subsets of the d
 
 The model built explain only about 3% of the variance.
 
-<img src="images/predicted-fare.png">
+<img src="images/predicted-fare.png" height="400px">
 
 Looking at the map above with the predicted fares we see that fares in downtown Manhattan are predicted to be high, while midtown is lower. 
 
 When comparing the map with the predicted fares with a new map showing the mean fares according to the data, it looks like the random forest model captured some of the patterns in our data.
 
-<img src="images/actual-fare.png">
+<img src="images/actual-fare.png" height="400px">
 
