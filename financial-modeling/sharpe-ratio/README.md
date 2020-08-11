@@ -1,6 +1,11 @@
 # Risk and Returns: The Sharpe Ratio
 _Calculating the Sharpe Ratio for the stocks of Facebook and Amazon_
 
+<p align="center">
+  <img src="https://www.wallstreetmojo.com/wp-content/uploads/2018/12/Sharpe-Ratio-Formula.jpg" height="300px">
+</p>
+
+## Objective
 The Sharpe ratio compares the **expected returns** for two investment opportunities and calculates the **additional return per unit of risk** an investor could obtain by choosing one over the other. 
 In particular, it looks at the difference in returns for two investments and compares the average difference to the **standard deviation** (as a measure of risk) of this difference. 
 A higher Sharpe ratio means that the reward will be higher for a given amount of risk. 
