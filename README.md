@@ -17,3 +17,6 @@ _Data Science Case Studies_
 
 ## Text Mining
 1. [Text Mining America's Toughest Game Show](https://github.com/vanessaaleung/ds-case-studies/tree/master/text-mining/jeopardy)
+
+## Financial Modeling
+1. [Risk and Returns: The Sharpe Ratio](https://github.com/vanessaaleung/ds-case-studies/tree/master/financial-modeling/sharpe-ratio)
