@@ -5,20 +5,11 @@ _Data Science Case Studies_
   <img src="https://accesto.com/images/case_study_list.svg" height="300px">
 </p>
 
-## A/B Testing
-1. [Mobile Games A/B Testing with Cookie Cats](https://github.com/vanessaaleung/ds-case-studies/tree/master/ab-testing/mobile-cookie-cats)
-
-## Modeling
-1. [Kidney Stone Treatment](https://github.com/vanessaaleung/ds-case-studies/tree/master/modeling/kidney-stone-treatment)
-2. [Predict Taxi Fares with Random Forests](https://github.com/vanessaaleung/ds-case-studies/tree/master/modeling/taxi-fare)
-
-## Network Analysis
-1. [A Network Analysis of Game of Thrones](https://github.com/vanessaaleung/ds-case-studies/tree/master/network-analysis/game-of-thrones)
-
-## Text Mining
-1. [Text Mining America's Toughest Game Show](https://github.com/vanessaaleung/ds-case-studies/tree/master/text-mining/jeopardy)
-
-## Financial Modeling
-1. [Risk and Returns: The Sharpe Ratio](https://github.com/vanessaaleung/ds-case-studies/tree/master/financial-modeling/sharpe-ratio)
-2. [Modeling The Volatility Of Us Bond Yields](https://github.com/vanessaaleung/ds-case-studies/tree/master/financial-modeling/us-bond-yields)
-
+- [A/B Testing](https://github.com/vanessaaleung/ds-case-studies/tree/master/ab-testing)
+- [Prediction](https://github.com/vanessaaleung/ds-case-studies/tree/master/prediction)
+- [Network Analysis](https://github.com/vanessaaleung/ds-case-studies/tree/master/network-analysis)
+- [Text Mining](https://github.com/vanessaaleung/ds-case-studies/tree/master/ab-testing)
+- [Financial Modeling](https://github.com/vanessaaleung/ds-case-studies/tree/master/financial-modeling)
+- [Pricing](https://github.com/vanessaaleung/ds-case-studies/tree/master/pricing)
+- [Recommender System](https://github.com/vanessaaleung/ds-case-studies/tree/master/recommender-system)
+- [Marketing Analysis](https://github.com/vanessaaleung/ds-case-studies/tree/master/marketing-analysis)

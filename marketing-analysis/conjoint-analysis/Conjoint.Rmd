@@ -1,0 +1,114 @@
+---
+title: "Conjoint Analysis"
+author: "Vanessa Liang"
+date: "1/17/2020"
+output: html_document
+---
+Read Preference and Design Matrix from csv file
+```{r setup, include=FALSE}
+# read data
+input<- read.csv("StellaZ.csv")
+preference <- input$Preference.rank
+design_mat <- input[,3:9]
+```
+
+Function
+Input:
+1. Preferences
+2. Design matrix
+
+Output:
+1. Partworth estimates
+2. Attribute importance (%)
+3. Willingness to pay for each attribute ($)
+4. Optimal price
+5. Market share at optimal price
+6. Maximum profit at optimal price
+
+```{r}
+conjoint <- function(preference, design_mat){
+  # calculate Partworth estimates
+  screen52 <- design_mat$Screen.52.inch
+  screen65 <- design_mat$Screen.65.inch
+  tech3D <- design_mat$X2D.or.3D
+  sony <- design_mat$Sony...1
+  price <- design_mat$Price..low...0..hi..1.
+  reg <- lm(preference ~ screen52 + screen65 + tech3D + sony + price)
+  estimate <- reg$coefficients
+  price_estimate <- estimate["price"]
+  
+  # # calculate Attribute Importance (%)
+  screensize_range <- abs(estimate["screen65"] - estimate["screen52"])
+  tech_range <- abs(estimate["tech3D"] - 0)
+  brand_range <- abs(estimate["sony"] - 0)
+  price_range <- 0 - estimate["price"]
+  total_range <- screensize_range + tech_range + brand_range + price_range
+  screensize_importance <- screensize_range / total_range
+  tech_importance <- tech_range / total_range
+  brand_importance <- brand_range / total_range
+  price_importance <- price_range / total_range
+  attribute_importance <- c(screensize_importance, tech_importance,
+                            brand_importance, price_importance)
+  # initialize design matrix
+  my_design <- c(ifelse(estimate["(Intercept)"] > 0, 1, 0),
+                 ifelse(estimate["screen52"] >= estimate["screen65"], 1, 0),
+                 ifelse(estimate["screen65"] > estimate["screen52"], 1, 0),
+                 ifelse(estimate["tech3D"] > 0, 1, 0),
+                 ifelse(estimate["sony"] > 0, 1, 0)
+  )
+  sony_design <- c(1, 1, 0, 1, 1)
+  sony_design_price <- 2500
+  sharp_design <- c(1, 0, 1, 1, 0)
+  sharp_design_price <- 2000
+  sony_utility <- as.numeric(sum(as.matrix(sony_design) * estimate[1:5])+ price_estimate * (sony_design_price - 2000)/(2500 - 2000))
+  sony_attractiveness <- exp(sony_utility)
+  sharp_utility <- as.numeric(sum(as.matrix(sharp_design) * estimate[1:5]) + price_estimate * (sharp_design_price - 2000)/(2500 - 2000))
+  sharp_attractiveness <- exp(sharp_utility)
+  # # cost
+  cost <- c(1000, 500, 1000, 250, 250)
+  net_cost <- as.numeric(sum(as.matrix(my_design) * cost))
+  market_size <- 100
+  # summary_table to save for loop results
+  summary_table <- data.frame(matrix(ncol = 5, nrow = 0))
+  colnames(summary_table) <- c("Price", "Share", "Sales", "Margin","Profit")
+  # for loop to iterate through different prices
+  for (price in seq(1500, 3100, by = 100)){
+    price_savings <- price - 2000
+    util <- price_savings / abs(price_estimate)
+    # calculate Willingness to Pay
+    willingness_to_pay <- estimate[1:5] * util
+    my_utility <- as.numeric(sum(as.matrix(my_design) * estimate[1:5]) + price_estimate * (price - 2000)/(2500 - 2000))
+    my_attractiveness <- exp(my_utility)
+    total_attractiveness <- my_attractiveness + sony_attractiveness + sharp_attractiveness
+    market_share <- my_attractiveness / total_attractiveness
+    sales <- market_share * market_size
+    margin <- price - net_cost
+    profit <- margin * sales
+    summary <- c(price, market_share, sales, margin, profit)
+    summary_table <- rbind(summary_table, summary)
+  }
+  # calculate Optimal Price, Share & Profit
+  summary_table <- summary_table[order(-summary_table[, 5]),]
+  opt_price <- summary_table[1, 1]
+  opt_market_share <- summary_table[1, 2]
+  opt_profit <- summary_table[1, 5]
+  # print the Output
+  print("Partworth Estimate")
+  print(estimate)
+  print("Attribute Importance (%)")
+  print(attribute_importance)
+  print("Willingness to Pay")
+  print(willingness_to_pay)
+  print("Optimal Price")
+  print(opt_price)
+  print("Market Share at Optimal Price")
+  print(opt_market_share)
+  print("Maximum profit at optimal price")
+  print(opt_profit)
+}
+```
+
+```{r}
+conjoint(preference, design_mat)
+```
+
