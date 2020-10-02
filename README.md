@@ -13,3 +13,4 @@ _Data Science Case Studies_
 - [Pricing](https://github.com/vanessaaleung/ds-case-studies/tree/master/pricing)
 - [Recommender System](https://github.com/vanessaaleung/ds-case-studies/tree/master/recommender-system)
 - [Marketing Analysis](https://github.com/vanessaaleung/ds-case-studies/tree/master/marketing-analysis)
+- [Natural Language Processing](https://github.com/vanessaaleung/ds-case-studies/tree/master/natural-language-processing)
