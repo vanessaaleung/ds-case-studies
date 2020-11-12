@@ -24,7 +24,7 @@ _Create models to predict if an email message is spam or not_
 2. TfidfVectorizer & Multinomial Naive Bayes Classifier
 3. TfidfVectorizer & Support Vector Classification + Length of Document
 4. TfidfVectorizer & Logistic Regression + Length of Document + # of digits per Document
-5. CountVectorizer & Logistic Regression + + Length of Document + # of digits per Document + # of Non-word Characters
+5. CountVectorizer & Logistic Regression + Length of Document + # of digits per Document + # of Non-word Characters
 
 ### Model Comparison
 - The best model is Model 5
