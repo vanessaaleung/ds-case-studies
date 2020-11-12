@@ -1,8 +1,12 @@
 # Spam Email Detection
 _Create models to predict if an email message is spam or not_
 
+## Data
+- The dataset contains 5572 messages, with 13.41% marked as spam message
+
+<img src="data.png" height="250px">
+
 ## Data Exploration
-- Percentage of spam in the data is 13.41%
 - Finding 1: Spam message tends to be longer
 - Finding 2: Spam message tends to have more digits
 - Finding 3: Spam message tends to have more non-word characters
