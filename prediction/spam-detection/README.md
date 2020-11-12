@@ -1,8 +1,9 @@
 # Spam Email Detection
 _Create models to predict if an email message is spam or not_
 
-<img src="https://www.saleshandy.com/blog/wp-content/uploads/2017/01/wsi-imageoptim-11-Reasons-Why-Your-Email-Ends-Up-In-Spam.png" height="300px">
-
+<p align="center">
+  <img src="https://www.saleshandy.com/blog/wp-content/uploads/2017/01/wsi-imageoptim-11-Reasons-Why-Your-Email-Ends-Up-In-Spam.png" height="300px">
+</p>
 
 ## Data
 - The dataset contains 5572 messages, with 13.41% marked as spam message
