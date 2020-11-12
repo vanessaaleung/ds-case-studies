@@ -5,6 +5,8 @@ _Create models to predict if an email message is spam or not_
   <img src="https://www.saleshandy.com/blog/wp-content/uploads/2017/01/wsi-imageoptim-11-Reasons-Why-Your-Email-Ends-Up-In-Spam.png" height="300px">
 </p>
 
+- [Jupyter Notebook](https://github.com/vanessaaleung/ds-case-studies/blob/master/prediction/spam-detection/Spam_Email_Detection.ipynb)
+
 ## Data
 - The dataset contains 5572 messages, with 13.41% marked as spam message
 
@@ -14,6 +16,8 @@ _Create models to predict if an email message is spam or not_
 - Finding 1: Spam message tends to be longer
 - Finding 2: Spam message tends to have more digits
 - Finding 3: Spam message tends to have more non-word characters
+
+<img src="summary.png" height="300px">
 
 ## Modeling
 1. CountVectorizer & Multinomial Naive Bayes Classifier
@@ -25,7 +29,7 @@ _Create models to predict if an email message is spam or not_
 ### Model Comparison
 - The best model is Model 5
 
-<img src="model-comparison.png">
+<img src="model-comparison.png" height="150px">
 
 - Smallest coefficient in the model: ['..', '. ', ' i', ' go', 'pe', ' y', '? ', ' h', 'ok', 'go']
 - Largest coefficient in the model: ['digit_count', 'co', 'ww', 'ne', 'ar', 'ia', 'xt', ' x', 'mob', ' ch']
