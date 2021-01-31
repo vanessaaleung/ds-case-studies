@@ -34,3 +34,9 @@ Usinng the below algorithms to build a prediction model on the training set:
 - Logistic Regression
 
 ### Model Performance
+| Algorithm	| Jaccard	| F1-score	| LogLoss	|
+| --------- | ------- | --------- | ------- |
+| KNN	| 0.67	| 0.65	| NA |
+| Decision Tree	| 0.40	| 0.54	| NA |
+| SVM	| 0.80	| 0.79	| NA |
+| LogisticRegression	| 0.74	| 0.63	| 0.55 |
