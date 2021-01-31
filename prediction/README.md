@@ -12,3 +12,5 @@
 - [Diabetes Prediction Models](https://github.com/vanessaaleung/ds-case-studies/tree/master/prediction/diabetes-prediction)
 
 - [Spam Email Detection](https://github.com/vanessaaleung/ds-case-studies/tree/master/prediction/spam-detection)
+
+- [Loan Repayment Prediction](https://github.com/vanessaaleung/ds-case-studies/tree/master/prediction/loan-repayment)
